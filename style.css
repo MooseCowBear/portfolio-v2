@@ -115,7 +115,19 @@ header svg {
 
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.1rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 500ms ease-out;
+}
+
+nav a:hover, nav a:focus {
+  color: #4158d0;
+  transform: scale(1.3);
+  text-decoration: underline;
 }
 
 main {
@@ -237,12 +249,11 @@ h3 {
   padding: 0;
   margin: 0;
   background-color: transparent;
-
-  border: 1px solid var(--text); /* not sure about color */
+  border: 1px solid rgba(128, 208, 199, 1); /* not sure about color */
 }
 
 .button-carousel.active {
-  background-color: var(--text);
+  background-color: rgba(128, 208, 199, 1);
 }
 
 .light, .dark {
@@ -255,6 +266,16 @@ h3 {
 
 .dark-theme .dark.show {
   display: block;
+}
+
+.show {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
 }
 
 .gradient-radius {
@@ -308,6 +329,17 @@ ul {
   display: flex;
   align-items: center;
   gap: 0.2rem;
+  color: inherit;
+  text-decoration: none;
+  transition: all 200ms ease-out;
+}
+
+.project__links a:hover, .project__links a:focus {
+  color: #4158d0;
+}
+
+.project__links a:hover svg, .project__links a:focus svg {
+  fill: #4158d0;
 }
 
 .project__links svg {
