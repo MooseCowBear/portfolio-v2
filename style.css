@@ -262,6 +262,25 @@ h3 {
   border-radius: 12px;
 }
 
+.chat.gradient-radius {
+  background: rgb(0, 147, 233);
+  background: linear-gradient(
+    126deg,
+    rgba(0, 147, 233, 1) 0%,
+    rgba(128, 208, 199, 1) 50%
+  );
+}
+
+.plttr.gradient-radius {
+  background: rgb(2, 102, 112);
+  background: linear-gradient(
+    126deg,
+    rgba(2, 102, 112, 1) 0%,
+    rgba(159, 237, 215, 1) 35%,
+    rgba(252, 225, 129, 1) 100%
+  );
+}
+
 ul {
   padding: 0;
   list-style: inside;
