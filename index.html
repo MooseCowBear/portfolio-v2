@@ -23,6 +23,120 @@
         <a href="#contact">contact</a>
       </nav>
     </header>
+    <main>
+      <section class="section-hero">
+        <div>
+          <h1>Hello, I'm Alisa</h1>
+          <p>
+            I build things with code, mostly for the web. Sometimes for my dog.
+          </p>
+        </div>
+      </section>
+      <!-- projects each need to be a carousel -->
+      <section class="section-projects">
+        <h2 id="projects" class="section__header-projects">
+          Selected Projects
+        </h2>
+        <div class="gradient-radius">
+          <section class="section-project">
+            <div id="carousel-1" class="carousel">
+              <div class="frame-carousel-1">
+                <div class="mockup">
+                  <div class="mockup__header">
+                    <div>
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                    <div class="url"></div>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill=""
+                          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- light mode images -->
+                  <img
+                    src="./assets/so_social_light_1.jpg"
+                    alt="so social"
+                    class="slide light show"
+                  />
+                  <img
+                    src="./assets/so_social_light_2.jpg"
+                    alt="so social"
+                    class="slide light"
+                  />
+                  <img
+                    src="./assets/so_social_light_3.jpg"
+                    alt="so social"
+                    class="slide light"
+                  />
 
+                  <!-- dark mode images -->
+                  <img
+                    src="./assets/so_social_dark_1.jpg"
+                    alt="so social"
+                    class="slide dark show"
+                  />
+                  <img
+                    src="./assets/so_social_dark_2.jpg"
+                    alt="so social"
+                    class="slide dark"
+                  />
+                  <img
+                    src="./assets/so_social_dark_3.jpg"
+                    alt="so social"
+                    class="slide dark"
+                  />
+                </div>
+              </div>
+
+              <div class="carousel__buttons">
+                <button
+                  class="button-carousel active"
+                  data-index="0"
+                  aria-label="first image"
+                ></button>
+                <button
+                  class="button-carousel"
+                  data-index="1"
+                  aria-label="second image"
+                ></button>
+                <button
+                  class="button-carousel"
+                  data-index="2"
+                  aria-label="third image"
+                ></button>
+              </div>
+            </div>
+            <div class="project__description">
+              <h3>So Social</h3>
+              <ul>
+                <li>
+                  description of the project in a sentence approximately this
+                  long
+                </li>
+                <li>
+                  features spelled out in a list which might be pretty long and
+                  might span multiple lines something like this
+                </li>
+                <li>possibly a fourth bullet point with text</li>
+                <li>tech stack list</li>
+              </ul>
+              <div class="project__links">
+                <a href="#">Code</a>
+                <a href="#">Live</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
