@@ -26,6 +26,7 @@ img {
 
 button {
   font-family: inherit;
+  cursor: pointer;
 }
 
 body {
@@ -57,3 +58,62 @@ a:not([class]) {
   }
 }
 /* end reset */
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  --background-body: #f4f4f4;
+  --background-card: #ffffff;
+  --text: rgb(20, 20, 20);
+
+  max-width: 1400px;
+  min-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 5vw;
+  background-color: var(--background-body);
+  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+}
+
+body.dark-mode {
+  /* TODO: define colors */
+}
+
+h2,
+h3 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header svg {
+  height: 30px;
+  width: 30px;
+  fill: var(--text);
+}
+
+.button__transparent {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
