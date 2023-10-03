@@ -57,7 +57,7 @@ const addThemeListener = () => {
 };
 
 const setInitialTheme = () => {
-  if (prefersDarkScheme) {
+  if (prefersDarkScheme.matches) {
     document.body.classList.add("dark-theme");
   } else {
     document.body.classList.add("light-theme");
