@@ -69,11 +69,12 @@ html {
 
 body {
   --background-body: rgba(244, 244, 244, 1);
-  --background-card: #ffffff;
-  --background-icons: #3d3d3d;
+  --background-card: rgb(255, 255, 255);
+  --background-icons: rgb(61, 61, 61);
   --text: rgb(20, 20, 20);
-  --accent: #4158d0;
+  --accent: rgb(65, 88, 208);
   --accent-secondary: rgba(128, 208, 199, 1);
+  --mockup-header: rgb(246, 247, 248);
 
   max-width: 1400px;
   min-width: 320px;
@@ -91,10 +92,11 @@ body {
 body.dark-theme {
   --text: rgba(244, 244, 244, 0.85);
   --background-body: rgb(40, 40, 40);
-  --background-card: #3d3d3d;
+  --background-card: rgb(61, 61, 61);
   --background-icons: rgba(244, 244, 244, 0.8);
   --accent: rgba(128, 208, 199, 1);
-  --accent-secondary: #4158d0;
+  --accent-secondary: rgb(65, 88, 208);
+  --mockup-header: rgba(123, 123, 124, 0.8);
 }
 
 h2,
@@ -211,7 +213,7 @@ h3 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: #f6f7f8;
+  background-color: var(--mockup-header);
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.2);
   max-height: 380px;
 }
@@ -238,7 +240,7 @@ h3 {
   border-radius: 50%;
   height: 10px;
   width: 10px;
-  background-color: #c5c5c5;
+  background-color: rgb(197, 197, 197);
 }
 
 .carousel {
@@ -293,12 +295,12 @@ h3 {
 }
 
 .gradient-radius {
-  background-color: #4158d0;
+  background-color: rgb(65, 88, 208);
   background-image: linear-gradient(
     43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
+    rgb(65, 88, 208) 0%,
+    rgb(200, 80, 192) 46%,
+    rgb(255, 204, 112) 100%
   );
   border-radius: 12px;
 }
