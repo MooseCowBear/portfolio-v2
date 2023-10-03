@@ -11,7 +11,7 @@ body,
 h1,
 h2,
 h3,
-p, 
+p,
 section,
 article,
 small {
@@ -45,9 +45,9 @@ a:not([class]) {
 
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -64,13 +64,16 @@ a:not([class]) {
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 body {
-  --background-body: #f4f4f4;
+  --background-body: rgba(244, 244, 244, 1);
   --background-card: #ffffff;
+  --background-icons: #3d3d3d;
   --text: rgb(20, 20, 20);
+  --accent: #4158d0;
+  --accent-secondary: rgba(128, 208, 199, 1);
 
   max-width: 1400px;
   min-width: 320px;
@@ -85,8 +88,13 @@ body {
   color: var(--text);
 }
 
-body.dark-mode {
-  /* TODO: define colors */
+body.dark-theme {
+  --text: rgba(244, 244, 244, 0.85);
+  --background-body: rgb(40, 40, 40);
+  --background-card: #3d3d3d;
+  --background-icons: rgba(244, 244, 244, 0.8);
+  --accent: rgba(128, 208, 199, 1);
+  --accent-secondary: #4158d0;
 }
 
 h2,
@@ -118,14 +126,15 @@ nav {
   gap: 1.1rem;
 }
 
-nav a {
+a {
   color: inherit;
   text-decoration: none;
   transition: all 500ms ease-out;
 }
 
-nav a:hover, nav a:focus {
-  color: #4158d0;
+a:hover,
+a:focus {
+  color: var(--accent);
   transform: scale(1.3);
   text-decoration: underline;
 }
@@ -185,7 +194,7 @@ h3 {
   gap: 2rem;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: var(--background-card);
 
   margin: 4px;
   padding: 2vw;
@@ -249,14 +258,15 @@ h3 {
   padding: 0;
   margin: 0;
   background-color: transparent;
-  border: 1px solid rgba(128, 208, 199, 1); /* not sure about color */
+  border: 1px solid var(--accent-secondary);
 }
 
 .button-carousel.active {
-  background-color: rgba(128, 208, 199, 1);
+  background-color: var(--accent-secondary);
 }
 
-.light, .dark {
+.light,
+.dark {
   display: none;
 }
 
@@ -274,8 +284,12 @@ h3 {
 }
 
 @keyframes fade {
-  from {opacity: 0} 
-  to {opacity: 1}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .gradient-radius {
@@ -308,6 +322,10 @@ h3 {
   );
 }
 
+.dark-theme .gradient-radius {
+  opacity: 0.8;
+}
+
 ul {
   padding: 0;
   list-style: inside;
@@ -329,17 +347,11 @@ ul {
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  color: inherit;
-  text-decoration: none;
-  transition: all 200ms ease-out;
 }
 
-.project__links a:hover, .project__links a:focus {
-  color: #4158d0;
-}
-
-.project__links a:hover svg, .project__links a:focus svg {
-  fill: #4158d0;
+a:hover svg,
+a:focus svg {
+  fill: var(--accent);
 }
 
 .project__links svg {
@@ -358,7 +370,7 @@ ul {
   padding: 1rem;
   grid-column: 1;
   grid-row: 2;
-    display: flex;
+  display: flex;
   flex-direction: column;
   gap: 1rem;
 }
@@ -412,6 +424,7 @@ footer h3 {
 }
 
 .github svg {
+  fill: var(--text);
   height: 20px;
   width: 20px;
 }
