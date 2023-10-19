@@ -314,6 +314,16 @@ h3 {
   );
 }
 
+.shoe.gradient-radius {
+  background: rgb(255, 107, 107);
+  background: linear-gradient(
+    112deg,
+    rgba(255, 107, 107, 1) 0%,
+    rgba(255, 230, 109, 1) 50%,
+    rgba(78, 205, 196, 1) 100%
+  );
+}
+
 .plttr.gradient-radius {
   background: rgb(2, 102, 112);
   background: linear-gradient(
