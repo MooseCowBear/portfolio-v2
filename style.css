@@ -441,6 +441,57 @@ footer h3 {
   width: 20px;
 }
 
+.animation-container {
+  overflow: hidden;
+}
+
+.animate-greeting {
+  animation: showup 3s ease-in backwards;
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-name {
+  position: absolute;
+  animation: slide 1.5s ease 1s backwards;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.animate-description {
+  animation: expand 3s ease 1800ms backwards;
+}
+
+@keyframes expand {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
 @media only screen and (max-width: 700px) {
   body {
     padding: 3vw;
