@@ -459,26 +459,11 @@ footer h3 {
 }
 
 .animate-name {
-  position: absolute;
-  animation: slide 1.5s ease 1s backwards;
-}
-
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateX(200px);
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+  animation: showup 1.5s ease 1.5s backwards;
 }
 
 .animate-description {
-  animation: expand 3s ease 1800ms backwards;
+  animation: expand 3s ease 2.5s backwards;
 }
 
 @keyframes expand {
