@@ -1,5 +1,3 @@
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
 const carouselPositions = { 1: 0, 2: 0, 3: 0 };
 
 const updateSlidePosition = (index, carousel, carouselNumber) => {
@@ -25,6 +23,7 @@ const updateSlidePosition = (index, carousel, carouselNumber) => {
 };
 
 const getOtherIndex = (index, numSlides) => {
+  // helper function to keep light and dark images aligned
   return index <= numSlides / 2 - 1
     ? index + numSlides / 2
     : index - numSlides / 2;
@@ -57,6 +56,8 @@ const addThemeListener = () => {
 };
 
 const setInitialTheme = () => {
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
   if (prefersDarkScheme.matches) {
     document.body.classList.add("dark-theme");
   } else {
