@@ -106,6 +106,7 @@ h3 {
 
 header {
   display: flex;
+  flex-wrap: wrap; /* not sure this is best */
   align-items: center;
   justify-content: space-between;
 }
@@ -428,12 +429,25 @@ footer h3 {
   line-height: 1.1;
 }
 
-.github {
+.github, .new-tab {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
   color: inherit;
+}
+
+.new-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.new-tab svg {
+  height: 1rem;
+  width: 1rem;
 }
 
 .email {
