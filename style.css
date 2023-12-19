@@ -106,7 +106,6 @@ h3 {
 
 header {
   display: flex;
-  flex-wrap: wrap; /* not sure this is best */
   align-items: center;
   justify-content: space-between;
 }
@@ -517,3 +516,21 @@ footer h3 {
 }
 
 .obfuscate span { display: none; }
+
+@media only screen and (max-width: 380px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  header .button__transparent {
+    align-self: flex-start;
+  }
+  a:hover, a:focus {
+    transform: scale(1.1);
+  }
+
+  nav {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
